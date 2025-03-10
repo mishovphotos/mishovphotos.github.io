@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jean-Michel Arraki Photography</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Courier New', monospace;
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 1.4rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    #timezone * {
+      text-decoration: none;
+    }
+
+    a {
+      font-family: 'Courier New', monospace;
+      text-decoration: none;
+      color: #000000;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    a:hover {
+      color: #007bff;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      padding: 10px 0 0;
+      width: 100%;
+    }
+
+    .menu a {
+      margin: 0 12px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .center-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-contact-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .contact-info {
+      max-width: 400px;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+      max-width: 500px;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+      margin-bottom: 80px; /* Padding for social icons */
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    @media (min-width: 1000px) {
+      body {
+        font-size: 1.2rem;
+      }
+
+      .menu a {
+        font-size: 1.2rem;
+      }
+
+      img {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .menu a {
+        font-size: 1rem;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .menu {
+        margin-top: 5px;
+      }
+
+      .content {
+        padding: 10px 10px 80px;
+        margin-bottom: 60px;
+      }
+
+      .menu a {
+        margin: 0 5px;
+      }
+
+      .menu {
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+
+      .center-image {
+        min-height: 60vh;
+        object-fit: cover;
+      }
+
+      .image-contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-info {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        font-size: 0.9rem;
+      }
+
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+    }
+
+    #timezone {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      z-index: 100;
+      white-space: nowrap;
+      text-align: center;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    const options = {
+      timeZone: 'US/Pacific',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    };
+    const formatter = new Intl.DateTimeFormat([], options);
+
+    setInterval(() => {
+      document.querySelector("#time").innerText = formatter.format(new Date());
+    }, 1000);
+  </script>
+</head>
+
+<body>
+  <div class="menu">
+    <a href="index.html">home</a> //
+    <a href="about.html">about</a> //
+    <a href="gallery.html">gallery</a> //
+    <a href="blog.html">blog</a> //
+    <a href="contact.html">contact</a>
+  </div>
+
+  <h1 style="margin-top: 20px;"><b>Contact</b></h1>
+
+  <div class="content">
+    <div class="image-contact-wrapper">
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:your-email@example.com">mishovphotos@proton.me</a></p>
+        <br>
+  <p><strong>Instagram:</strong> <a href="instagram.com/mishovphotos">@mishovphotos</a></p>
+<br>
+        <p>Open to traditional portraiture and portraiture concepts on digital or 35mm. Contact for collaborations and info.</p>
+      </div>
+      <div class="image-container">
+        <img src="contact/contact.jpeg" alt="Contact Jean-Michel Arraki" class="center-image" id="center-image" />
+      </div>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/yourusername" target="_blank">
+      <img src="ico/instagram.png" alt="Instagram" class="social-icon" />
+    </a>
+    <a href="mailto:your-email@example.com">
+      <img src="ico/mail.png" alt="Email" class="social-icon" />
+    </a>
+  </div>
+
+ 
+</body>
+</html>

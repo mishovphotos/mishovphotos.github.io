@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jean-Michel Arraki Photography</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Courier New', monospace;
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 1.4rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    a {
+      font-family: 'Courier New', monospace;
+      text-decoration: none;
+      color: #000000;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    a:hover {
+      color: #007bff;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      padding: 10px 0 0;
+      width: 100%;
+    }
+
+    .menu a {
+      margin: 0 12px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .center-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-container {
+      max-width: 500px;
+    }
+
+    .blog {
+      max-width: 600px;
+      text-align: left;
+      font-size: 1.1rem;
+      margin: 0 auto;
+    }
+
+    .blog a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .blog a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-post {
+      margin-bottom: 60px;
+    }
+
+    .blog-post img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+      margin-bottom: 80px;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    @media (max-width: 600px) {
+      .blog {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .content {
+        padding: 10px 10px 80px;
+        margin-bottom: 60px;
+      }
+
+      .menu a {
+        font-size: 1rem;
+        margin: 0 5px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        font-size: 0.9rem;
+      }
+
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+    }
+
+    #timezone {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      z-index: 100;
+      white-space: nowrap;
+      text-align: center;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    const options = {
+      timeZone: 'US/Pacific',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    };
+    const formatter = new Intl.DateTimeFormat([], options);
+
+    setInterval(() => {
+      document.querySelector("#time").innerText = formatter.format(new Date());
+    }, 1000);
+
+    window.onload = function () {
+      const now = new Date();
+      const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+      const timeOptions = { hour: '2-digit', minute: '2-digit' };
+      const formattedDate = now.toLocaleDateString(undefined, dateOptions);
+      const formattedTime = now.toLocaleTimeString(undefined, timeOptions);
+      document.getElementById('post-date').innerText = `${formattedDate} at ${formattedTime}`;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="menu">
+    <a href="index.html">home</a> //
+    <a href="about.html">about</a> //
+    <a href="gallery.html">gallery</a> //
+    <a href="blog.html">blog</a> //
+    <a href="contact.html">contact</a>
+  </div>
+
+  <h1 style="margin-top: 20px;"><b>Blog</b></h1>
+
+  <div class="content">
+    <div class="blog">
+      <div class="blog-post">
+        <img src="blog/blog1.jpg" alt="Blog Post Image" />
+        <p>Check out @snappiness on YouTube.</p>
+        <div class="post-date" id="post-date">Loading date...</div>
+        <h2>Old DSLRs</h2>
+        <p> Don’t you love when you come across a YouTube channel about a niche you also obsess over? I’ve been almost religiously watching old camera reviews by @snappiness on YouTube for the past year. It seems like nostalgia and photography go hand in hand—it’s so easy to see CCD or film cameras and feel transported to the eras they represent.
+        </p> <br>
+        <p>
+After blessing myself with Ken Rockwell’s eBay advice, I picked up a Nikon D70s and a Fuji FinePix S2 Pro for well below market rates—especially now that demand for even digicams is driving camera prices up across the board. Both cameras have CCD sensors and use CF cards, with the Nikon sporting a 6-megapixel APS-C sensor and the Fuji featuring an APS-C SuperCCD, which uses octagonal pixels to output 12 megapixels of effective resolution.
+        </p> <br>
+        <p>
+The D70s and S2 Pro have been my EDC cameras this past week. I paired them with the Nikon AF Nikkor 28-70mm f/3.5-4.5D and a YONGNUO YN50mm f/1.8N. Since these are full-frame lenses, they have a 1.5x crop factor on these bodies. Autofocus performance is similar between the two, but both struggle in low light. I prefer the Fuji’s photos—rich colors in every shot, and amazing quality and sharpness for a camera from 2002. The D70s, on the other hand, is great to take on a hike or when you want something lightweight with full manual controls.
+
+I will say, these cameras make me miss having physical controls for every setting. Beyond the filmic look of the CCDs, the experience feels a bit more analog—and I love that.
+        </p> <br>
+<p> Anyways here are a few shots from the <b> D70s (the pictures below have been edited using RawTherapee): </b>  <img src="blog/blog1a.jpg" alt="Blog Post Image" />  <img src="blog/blog1b.jpg" alt="Blog Post Image" /> </p>
+<p> The <b> S2 Pro: </b> <img src="blog/blog1c.jpg" alt="Blog Post Image" /><img src="blog/blog1d.jpg" alt="Blog Post Image" /> <img src="blog/blog1e.jpg" alt="Blog Post Image" /> </p>
+      </div>
+    </div>
+  </div>
+
+ <div class="social-icons">
+    <a href="https://www.instagram.com/mishovphotos" target="_blank">
+      <img src="ico/instagram.png" alt="Instagram" class="social-icon" />
+    </a>
+    <a href="mailto:mishovphotos@proton.me">
+      <img src="ico/mail.png" alt="Email" class="social-icon" />
+    </a>
+  </div>
+</body>
+</html>
